@@ -1,0 +1,46 @@
+$blue_light: #7650e0;
+$blue_dark: #5830c9;
+$blue-primary: #0a1f3e;
+$blue-darker: #000;
+$blue-pagination: #0a1f3e;
+$red_primary: red;
+$red_dark: #bd0a0a;
+$red_darker: #660404;
+$green_primary: green;
+$green_light: #44db0f;
+$green_darker: #34aa0b;
+
+$text_primary: #16283f;
+$text_grey_dark: #727272;
+$text_grey_light: #e5e5e5;
+$text-dark: #3d3d3d;
+
+$white: #fff;
+$black: #000;
+
+/* FONTS */
+$font: (
+    "ExtraThin": "Mont Hairline",
+    "Thin": "Mont Thin",
+    "Light": "Mont Light",
+    "ExtraLight": "Mont ExtraLight",
+    "Regular": "Mont Regular",
+    "Book": "Mont Book",
+    "SemiBold": "Mont SemiBold",
+    "Bold": "Mont Bold",
+    "Black": "Mont Black",
+    "Heavy": "Mont Heavy"
+);
+
+// widths
+$mobile: 650px;
+$tab: 1200px;
+$small: 1400px;
+$medium: 1750px;
+$large: 2000px;
+
+$fixed-width: 1150px;
+$full-width: 100%;
+
+// paddings & margins
+$padding: 25px;

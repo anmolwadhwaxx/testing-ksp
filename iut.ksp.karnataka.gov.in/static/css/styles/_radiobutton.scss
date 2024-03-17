@@ -1,0 +1,68 @@
+
+.form-control {
+    font-family: font("SemiBold");
+    font-size: 0.9em;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    float: left;
+    color: $blue-primary;
+    line-height: 1.8em;
+    text-indent: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+  
+.form-control + .form-control {
+    margin-left: 20px;
+}
+  
+.form-control:focus-within {
+    color: $blue-primary;
+}
+  
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: $blue-primary;
+    /* Not removed via appearance */
+    margin: 0;
+  
+    font: inherit;
+    color: $blue-primary;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+
+    cursor: pointer;
+}
+  
+input[type="radio"]::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: $white;
+}
+
+input[type="radio"]:checked {
+    background-color: $red-primary;
+    transform: scale(1);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+  

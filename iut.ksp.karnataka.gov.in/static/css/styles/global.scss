@@ -1,0 +1,2015 @@
+@import "./fonts";
+@import "./variables";
+@import "./functions";
+@import "./resets";
+@import "./mixins"; 
+@import "./checkbox";
+@import "./radiobutton";
+
+
+
+.selectInput{text-transform: capitalize;}
+.uppercase{text-transform: uppercase;}
+.email{text-transform: none !important;}
+.page{
+    width: $full-width;
+    height: 100vh;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    @include tab(){
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    @include mobile(){
+        flex-direction: column-reverse;
+        height: auto;
+    }
+}
+.pageSidebar{
+    width: 32%;
+    height: 100%;
+    float: left;
+    background-image: linear-gradient(180deg,rgba(68, 39, 165, .9),rgba(68, 39, 165, .9)),url('../../public/images/vidhansoudha-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include tab(){
+        width: $full-width;
+        height: auto;
+    }
+    @include mobile(){
+        width: $full-width;
+        height: auto;
+    }
+}
+
+.pageAdminSidebar{
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-image: linear-gradient(180deg,rgba(68, 39, 165, .9),rgba(68, 39, 165, .9)),url('../../public/images/vidhansoudha-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include tab(){
+        width: $full-width;
+        height: auto;
+    }
+    @include mobile(){
+        width: $full-width;
+        height: auto;
+    }
+}
+
+.pageSidebarMain{
+    width: $full-width;
+    float: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 60px 60px 80px;
+
+    @include tab(){
+        position: relative;
+        height: auto;
+        padding: 40px 40px 60px 40px;
+    }
+    @include mobile(){
+        width: relative;
+        height: auto;
+        padding: 40px 40px 60px 40px;
+    }
+}
+.pageSideBarContent{
+    width: $full-width;
+    float: left;
+    @include tab(){
+        margin-top: 30px;
+    }
+    @include mobile(){
+        margin-top: 30px;
+    }
+}
+.pageSideBarContentHeading{
+    width: $full-width;
+    float: left;
+}
+.pageSideBarContentHeadingTxt{
+    font-family: font('Bold');
+    color: $white;
+    font-size: 2.4em;
+    text-transform: capitalize;
+    line-height: 1.3em;
+    @include tab(){
+        text-align: center;
+    }
+    @include mobile(){
+        text-align: center;
+    }
+}
+.pageSideBarContentDescription{
+    width: $full-width;
+    margin-top: 30px;
+    float: left;
+}
+.pageSideBarContentDescriptionTxt{
+    width: $full-width;
+    float: left;
+    color: $white;
+    font-size: 0.9em;
+    line-height: 1.7em;
+    font-family: font("Regular");
+    @include tab(){
+        text-align: center;
+    }
+    @include mobile(){
+        text-align: center;
+    }
+}
+
+.pageSideBarContentActions{
+    width: $full-width;
+    float: left;
+    margin-top: 40px;
+}
+.pageSideBarContentActionSingle{
+    width: $full-width;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+.pageSideBarContentActionSingle:last-child{
+    margin: 0px;
+}
+.pageSideBarContentActionSingleIcon{
+    width: 60px;
+    height: 60px;
+    background-color: #181816;
+    float: left;
+    @include flexCenter();
+
+    @include tab(){
+        position: relative;
+    }
+    @include mobile(){
+        display: none;
+    }
+}
+.pageSideBarContentActionSingleIco{
+    font-size: 1.4em;
+    color: $white;
+}
+.pageSideBarContentActionSingleContent{
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.pageSideBarContentActionSingleContentLable{
+    float: left;
+}
+.pageSideBarContentActionSingleContentLableTxt{
+    float: left;
+    font-family: font("SemiBold");
+    font-size: 0.9em;
+    color: $white;
+    text-transform: capitalize;
+}
+.pageSideBarContentActionSingleContentHeading{
+    float: left;
+    margin-top: 5px;
+}
+.pageSideBarContentActionSingleContentHeadingTxt{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1.2em;
+    color: $white;
+    text-transform: capitalize;
+}
+
+.pageContent{
+    width: 68%;
+    height: $full-width;
+    overflow: auto;
+    float: left;
+    position: relative;
+    padding-bottom: 50px;
+
+    @include tab(){
+        width: $full-width;
+        padding-bottom: 30px;
+    }
+    @include mobile(){
+        width: $full-width;
+        padding-bottom: 30px;
+    }
+}
+
+.pageAdminContent{
+    width: 100%;
+    height: $full-width;
+    overflow: auto;
+    float: left;
+    position: relative;
+    padding-bottom: 50px;
+    background-color: #ecf0fb;
+
+    @include tab(){
+        width: $full-width;
+        padding-bottom: 30px;
+    }
+    @include mobile(){
+        width: $full-width;
+        padding-bottom: 30px;
+    }
+}
+
+.pageContentDecorator{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.pageContentDecoratorImg{
+    float: left;
+}
+
+.pageContentMain{
+    width: $full-width;
+    padding: 80px 100px 0px 100px;
+    float: left;
+    
+    @include tab(){
+        padding: 40px 30px 0px 30px;
+    }
+    @include mobile(){
+        padding: 40px 30px 0px 30px;
+    }
+}
+
+.pageContentHeadingAction{
+    width: $full-width;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+}
+.pageContentHeading{
+    float: left;
+    
+    @include tab(){
+        width: $full-width;
+    }
+    @include mobile(){
+        width: $full-width;
+    }
+}
+.pageContentHeadingTxt{
+    float: left;
+    font-family: font("Heavy");
+    font-size: 2.8em;
+    text-transform: capitalize;
+}
+.pageContentAction{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    
+    @include tab(){
+        margin-top: 15px;
+    }
+    @include mobile(){
+        margin-top: 15px;
+    }
+}
+.pageContentLoginAction{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    
+    @include tab(){
+        margin-top: 15px;
+        display: block;
+    }
+    @include mobile(){
+        margin-top: 15px;
+        display: block;
+    }
+}
+.pageContentActionTxt{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $text_primary;
+    text-transform: capitalize;
+}
+.pageContentActionLink{
+    float: left;
+    margin-left: 15px;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $blue_light;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.pageContentLoginActionLink{
+    float: left;
+    margin-left: 15px;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $blue_light;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+    
+    @include tab(){
+        margin: 10px 0px 0px;
+        width: $full-width;
+    }
+    @include mobile(){
+        margin: 10px 0px 0px;
+        width: $full-width;
+    }
+}
+
+.registerSection{margin-top: 30px;}
+.loginForm{margin: 0px !important;}
+
+.pageContentSection{
+    width: $full-width;
+    float: left;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: 1px solid $text_grey_light;
+}
+.pageContentSectionHeading{
+    width: $full-width;
+    float: left;
+    position: relative;
+}
+.pageContentSectionHeadingMandatory{
+    float: left;
+    
+    @include tab(){
+        position: absolute;
+        left: 0px;
+        top: 6px;
+    }
+    @include mobile(){
+        position: absolute;
+        left: 0px;
+        top: 6px;
+    }
+}
+.pageContentSectionHeadingMandatoryIco{
+    float: left;
+    color: $text_primary;
+    font-size: 0.8em;
+    
+    @include tab(){
+        font-size: 0.8em;
+    }
+    @include mobile(){
+        font-size: 0.6em;
+    }
+}
+.pageContentSectionHeadingLable{
+    float: left;
+    margin: -6px 0px 0px 15px;
+    
+    @include tab(){
+        margin: 0px 0px 0px 15px;
+    }
+    @include mobile(){
+        margin: 0px 0px 0px 15px;
+    }
+}
+.pageContentSectionHeadingLableTxt{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1.8em;
+    text-transform: capitalize;
+    
+    @include tab(){
+        font-size: 1.4em;
+    }
+    @include mobile(){
+        font-size: 1.4em;
+    }
+}
+
+.pageContentSectionHeadingAction{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    float: left;
+    
+    @include tab(){
+        position: relative;
+        margin: 20px 0px 0px 15px;
+        width: $full-width;
+    }
+    @include mobile(){
+        position: relative;
+        margin: 20px 0px 0px 15px;
+        width: $full-width;
+    }
+}
+
+.pageContentSectionHeadingActionTxt{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $blue_light;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+    
+    @include tab(){
+        // margin: 10px 0px 0px;
+        // width: $full-width;
+    }
+    @include mobile(){
+        // margin: 10px 0px 0px;
+        // width: $full-width;
+    }
+}
+
+.pageContentSectionForm{
+    width: $full-width;
+    float: left;
+    margin-top: 30px;
+}
+.pageContentSectionFormStep{
+    width: $full-width;
+    float: left;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+}
+.pageContentSectionFormStep:last-child{
+    margin: 0px;
+}
+.pageContentSectionFormStepHalf{
+    width: 50%;
+    float: left;
+    
+    @include tab(){
+        width: 100%;
+    }
+    @include mobile(){
+        width: 100%;
+    }
+}
+.pageContentSectionFormStepHalf:first-child{
+    @include tab(){
+        margin-bottom: 20px;
+    }
+    @include mobile(){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.pageContentSectionFormStepHalf:last-child{
+    @include tab(){
+        margin-bottom: 0px;
+    }
+    @include mobile(){
+        width: 100%;
+        margin-bottom: 0px;
+    }
+}
+.pageContentSectionFormStepLable{
+    width: $full-width;
+    float: left;
+}
+.pageContentSectionFormStepHalfLableTxt{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $text_grey_dark;
+    text-transform: capitalize;
+    text-indent: 30px;
+    
+    @include tab(){
+        text-indent: 20px;
+        font-size: 0.85em;
+    }
+    @include mobile(){
+        text-indent: 20px;
+        font-size: 0.85em;
+    }
+}
+.pageContentSectionFormStepHalfLableTxt.radio{
+    text-indent: 0px;
+}
+.pageContentSectionFormStepInput{
+    width: $full-width;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+}
+.pageContentSectionFormStepInputTxt{
+    width: $full-width;
+    float: left;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid $text_grey_light;
+    background-color: $white;
+    
+    @include tab(){
+        padding: 15px 20px;
+    }
+    @include mobile(){
+        padding: 15px 20px;
+    }
+}
+
+.pageContentSectionFormStepInputTxt.readonly{
+    background: $text_grey_light;
+}
+
+.datePickerInput{
+    float: left;
+    text-align: left;
+}
+
+.pageContentSectionFormStepError{
+    width: $full-width;
+    float: left;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.pageContentSectionFormStepErrorTxt{
+    color: $red_primary;
+    font-size: 0.85em;
+    text-transform: capitalize;
+}
+
+.sectionConfirm{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+}
+.pageContentSectionDisclaimer{
+    width: 60%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    @include tab(){
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    @include mobile(){
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+.pageContentSectionLoginDisclaimer{
+    width: 60%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    @include tab(){
+        width: 100%;
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+    @include mobile(){
+        width: 100%;
+        margin-bottom: 25px;
+        justify-content: center;
+    }
+}
+.pageContentSectionLoginDisclaimer.hide{
+    @include tab(){
+        display: none !important;
+    }
+    @include mobile(){
+        display: none !important;
+    }
+}
+
+.pageContentSectionDisclaimerCheck{
+    float: left;
+}
+.pageContentSectionDisclaimerCheckInput{
+    margin-top: 3px;
+    float: left;
+}
+.pageContentSectionDisclaimerCheckInput{
+    float: left;
+}
+.pageContentSectionDisclaimerContent{
+    float: left;
+}
+.pageContentSectionDisclaimerContentTxt{
+    font-family: font("Regular");
+    color: $text_primary;
+    font-size: 0.85em;
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.pageContentSectionLoginForgotPasswordButton{
+    float: left;
+    margin-left: 15px;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $blue_light;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pageContentSectionConfirmButton{
+    width: 35%;
+    float: left;
+    margin-left: 5%;
+    
+    @include tab(){
+        width: 100%;
+        margin: 0px;
+    }
+    @include mobile(){
+        width: 100%;
+        margin: 0px;
+    }
+}
+.pageContentSectionConfirmButtonInput{
+    width: $full-width;
+    padding: 15px 0px;
+    float: left;
+    background-color: $blue_light;
+    color: $white;
+    text-transform: uppercase;
+    font-family: font("Bold");
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.pageContentSectionConfirmButtonInput:hover{
+    background-color: $blue_dark;
+}
+.pageContentSectionConfirmButtonInput:disabled{
+    opacity: 0.4;
+    cursor: no-drop;
+}
+.pageContentSectionConfirmButtonInput:disabled:hover{
+    background-color: $blue_light;
+}
+
+.alertContainer{
+    width: $full-width;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.85);
+    float: left;
+    @include flexCenter();
+    top: 0px;
+    left: 0px;
+}
+.alertPopUp{
+    width: 500px;
+    height: auto;
+    max-height: 500px;
+    float: left;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    
+    @include tab(){
+        width: 90%;
+        margin: 0px;
+    }
+    @include mobile(){
+        width: 90%;
+        margin: 0px;
+    }
+}
+.alertPopUpContent{
+    width: $full-width;
+    float: left;
+    padding: 50px 35px 25px 35px;
+}
+.alerPopUpContentIcon{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+}
+.alerPopUpContentIco{
+    color: $blue_light;
+    font-size: 5em;
+    float: left;
+}
+.alerPopUpContentIco.danger{
+    color: $red_primary;
+}
+.alerPopUpContentIco.success{
+    color: $green_darker;
+}
+.alerPopUpContentHeadingDescription{
+    width: $full-width;
+    float: left;
+    margin-top: 25px;
+}
+.alerPopUpContentHeading{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+}
+.alerPopUpContentHeadingTxt{
+    float: left;
+    font-size: 1.5em;
+    font-family: font("Bold");
+    text-transform: capitalize;
+    color: $text_primary;
+    text-align: center;
+    line-height: 1.4em;
+}
+.alerPopUpContentDescription{
+    width: $full-width;
+    float: left;
+    margin-top: 10px;
+}
+.alerPopUpContentDescriptionTxt{
+    float: left;
+    width: $full-width;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.7em;
+    color: $text_grey_dark;
+}
+.alertPopUpActions{
+    width: $full-width;
+    float: left;
+    padding-bottom: 40px;
+}
+.alertPopUpActionsMain{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+}
+.alertPopUpActionSingle{
+    padding: 12px 40px;
+    float: left;
+    background-color: $blue_light;
+    color: $white;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.alertPopUpActionSingle:last-child{
+    margin: 0px;
+}
+.alertPopUpActionSingle:hover{
+    background-color: $blue_dark;
+}
+.alertPopUpActionSingle.danger{
+    background-color: $red_primary;
+}
+.alertPopUpActionSingle.danger:hover{
+    background-color: $red_darker;
+}
+.alertPopUpActionSingle.success{
+    background-color: $green_darker;
+}
+.alertPopUpActionSingle.success:hover{
+    background-color: $green_primary;
+}
+
+.pageContentSectionFormStepPasswordReqs{
+    width: $full-width;
+    float: left;
+    padding-top: 15px;
+    margin-top: 25px;
+    border-top: 1px solid $text_grey_light;
+}
+
+.pageContentSectionFormStepPasswordReqSingle{
+    width: $full-width;
+    float: left;
+    position: relative;
+    padding: 10px 0px 10px 40px;
+}
+
+.pageContentSectionFormStepPasswordReqSingleIcon{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.pageContentSectionFormStepPasswordReqSingleIco{
+    float: left;
+    font-size: 1.2em;
+}
+
+.pageContentSectionFormStepPasswordReqSingleIco.errorIcon{
+    color: $red_primary;
+}
+
+.pageContentSectionFormStepPasswordReqSingleIco.successIcon{
+    color: $green_darker;
+}
+
+.pageContentSectionFormStepPasswordReqSingleLable{
+    width: $full-width;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.pageContentSectionFormStepPasswordReqSingleLableTxt{
+    float: left;
+    font-size: 0.9em;
+    font-family: font("Bold");
+    color: $text_grey_dark;
+}
+
+.pageMessageSection{
+    width: $full-width;
+    margin-top: 50px;
+    float: left;
+    @include flexCenter();
+}
+
+.pageMessageSectionInner{
+    width: 100%;
+    padding: 60px 50px;
+    border: 3px dashed $green_primary;
+    float: left;
+    border-radius: 50px;
+}
+
+.pageMessageSectionIcon{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+}
+
+.pageMessageSectionIco{
+    float: left;
+    font-size: 5em;
+    color: $green_primary;
+}
+
+.pageMessageSectionContent{
+    width: $full-width;
+    margin-top: 20px;
+    float: left;
+}
+
+.pageMessageSectionContentHeading{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+}
+
+.pageMessageSectionContentHeadingTxt{
+    float: left;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: font("Bold");
+    
+}
+
+.pageMessageSectionContentDescription{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+    margin-top: 10px;
+}
+
+.pageMessageSectionContentDescriptionTxt{
+    float: left;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.pageSidebarLogo{
+    width: $full-width;
+    float: left;
+    @include flexCenter();
+    
+    @include tab(){
+        margin-top: 40px;
+    }
+    @include mobile(){
+        margin-top: 40px;
+    }
+}
+.pageSidebarLogoImage{
+    width: 150px;
+    width: 150px;
+    float: left;
+    background: $white;
+    border-radius: 20px;
+    @include flexCenter();
+    padding: 30px 30px;
+}
+.pageSidebarLogoImg{
+    width: $full-width;
+    float: left;
+}
+
+.showPasswordIcon{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    height: 100%;
+    @include flexCenter();
+}
+.showPasswordIco{
+    color: $blue_dark;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.showPasswordIco:hover{
+    color: $text_primary;
+}
+
+.adminDashboardPage{
+    width: $full-width;
+    float: left;
+    margin-top: 50px;
+}
+
+.adminDashboardPageInner{
+    width: $full-width;
+    float: left;
+}
+
+.adminDashboardPageStats{
+    width: $full-width;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.adminDashboardPageStatSingle{
+    width: 25%;
+    float: left;
+    padding: 30px 40px 40px 45px;
+    border-radius: 15px;
+}
+
+.adminDashboardPageStatSingle.red{
+    background-color: #c02329;
+}
+.adminDashboardPageStatSingle.green{
+    background-color: $green_primary;
+}
+.adminDashboardPageStatSingle.blue{
+    background-color: $blue_light;
+}
+.adminDashboardPageStatSingle.yellow{
+    background-color: #9c9a2d;
+}
+
+.adminDashboardPageStatSingleInner{
+    width: $full-width;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.adminDashboardPageStatSingleIcon{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.adminDashboardPageStatSingleIco{
+    color: $white;
+    font-size: 3em;
+}
+
+.adminDashboardPageStatSingleContent{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: $full-width;
+}
+.adminDashboardPageStatSingleNumber{
+    float: left;
+}
+.adminDashboardPageStatSingleNumberTxt{
+    float: right;
+    font-size: 3.2em;
+    font-family: font("Bold");
+    color: $white;
+}
+.adminDashboardPageStatSingleLable{
+    float: left;
+}
+.adminDashboardPageStatSingleLableTxt{
+    float: right;
+    font-size: 1.1em;
+    font-family: font("SemiBold");
+    color: $white;
+    text-align: right;
+}
+
+.adminDashboardPageContent{
+    width: $full-width;
+    float: left;
+    margin-top: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.05);
+}
+
+.adminDashboardPageContentFilters{
+    width: $full-width;
+    float: left;
+}
+.adminDashboardPageContentFilterStep{
+    width: $full-width;
+    float: left;
+    margin-bottom: 20px;
+}
+.adminDashboardPageContentFilterStep:last-child{
+    margin: 0px;
+}
+.adminDashboardPageContentFilterStep{
+    width: $full-width;
+    float: left;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+}
+.adminDashboardPageContentFilterStep:last-child{
+    margin: 0px;
+}
+.adminDashboardPageContentTableContainer{
+    width: $full-width;
+    float: left;
+    overflow-x: auto;
+    margin-top: 30px;
+}
+.adminDashboardPageContentTable{
+    float: left;
+    min-width: $full-width; 
+    display: flex; 
+    flex-direction: column; 
+    border: 1px solid #3d3d3d;
+}
+.adminDashboardPageContentTableHeading{
+    width: $full-width;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #3d3d3d;
+}
+.adminDashboardPageContentTableHeadingSingle{
+    border-right: 1px solid #0a1f3e;
+    height: 45px;
+    @include flexCenter
+}
+.adminDashboardPageContentTableHeadingSingle:last-child{
+    border: 0px;
+}
+.adminDashboardPageContentTableHeadingSingle.applicationID{
+    min-width: 120px;
+    flex: 2 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.name{
+    min-width: 250px;
+    flex: 4 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.from{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.category{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.appliedOn{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.view{
+    min-width: 60px;
+    flex: 1 1 0;
+}
+.adminDashboardPageContentTableHeadingSingle.action{
+    min-width: 250px;
+    flex: 2 1 0;
+}
+.adminDashboardPageContentTableHeadingSingleLableTxt{
+    color: $text_primary;
+    font-family: font("Bold");
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.adminDashboardPageContentTableRowContainer{
+    width: $full-width;
+    float: left;
+    position: relative;
+}
+
+.adminDashboardPageContentTableRow{
+    width: $full-width;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    background: #ecf0fb;
+    border-bottom: 1px solid $text-dark;
+}
+.adminDashboardPageContentTableRow:nth-child(2n){
+    background-color: $white;
+}
+.adminDashboardPageContentTableRow:last-child{
+    border: 0px
+}
+.tableRow:nth-child(2n) {
+    background: $white;
+}
+.tableRow:last-child {
+    border-bottom: 0px;
+}
+.adminDashboardPageContentTableRowSingle{
+    height: 45px;
+    border-right: 1px solid $blue-primary;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+.adminDashboardPageContentTableRowSingle.center{
+    justify-content: center;
+}
+.adminDashboardPageContentTableRowSingle.center .adminDashboardPageContentTableRowSingleLable{
+    padding: 5px 0px;
+}
+
+.adminDashboardPageContentTableRowSingle:last-child{
+    border: 0px;
+}
+.adminDashboardPageContentTableRowSingle.applicationID{
+    min-width: 120px;
+    flex: 2 1 0;
+}
+.adminDashboardPageContentTableRowSingle.name{
+    min-width: 250px;
+    flex: 4 1 0;
+}
+.adminDashboardPageContentTableRowSingle.from{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableRowSingle.category{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableRowSingle.appliedOn{
+    min-width: 180px;
+    flex: 3 1 0;
+}
+.adminDashboardPageContentTableRowSingle.view{
+    min-width: 60px;
+    flex: 1 1 0;
+}
+.adminDashboardPageContentTableRowSingle.action{
+    min-width: 250px;
+    flex: 2 1 0;
+}
+.adminDashboardPageContentTableRowSingleLable{
+    float: left;
+    padding: 0px 10px;
+}
+.adminDashboardPageContentTableRowSingleLableTxt{
+    font-family: font("SemiBold");
+    font-size: .95em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.tableButton {
+    float: left;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: font("SemiBold");
+    text-transform: capitalize;
+}
+.tableButton.primary {
+    background: $blue-primary;
+    color: $white;
+}
+.tableButton.primary:hover {
+    background: $blue-darker;
+}
+.tableButton.success {
+    background: #278855;
+    color: $white;
+}
+.tableButton.success:hover {
+    background: #17683d;
+}
+.tableButton.danger {
+    background: #c84114;
+    color: $white;
+}
+.tableButton.danger:hover {
+    background: #952905;
+}
+
+.pageContentSectionFormStepSort{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.pageContentSectionFormStepSort:last-child{
+    margin: 0px;
+}
+
+.pageContentSectionFormStepInputRadio{
+    float: left;
+    margin: 10px 0px 0px 30px;
+}
+.pageContentSectionFormStepInputRadioMain{
+    height: 35px;
+    float: left;
+    width: auto;
+    margin-right: 15px;
+}
+.pageContentSectionFormStepInputRadioMain:last-child{
+    margin: 0px;
+}
+
+.adminDashboardPageContentTableRowSingleAction{
+    width: $full-width;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px
+}
+
+.adminDashboardPageContentFilterActions{
+    width: $full-width;
+    float: left;
+}
+
+.adminDashboardPageContentFilterActionsInner{
+    float: left;
+    width: $full-width;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminDashboardPageContentFilterActionSingle{
+    float: left;
+}
+.adminDashboardPageContentFilterActionSingle:last-child{
+    margin: 0px;
+}
+
+.adminDashboardPageContentFilterActionSingleButtonInput{
+    padding: 15px 30px;
+    float: left;
+    background-color: $blue_light;
+    color: $white;
+    text-transform: uppercase;
+    font-family: font("Bold");
+    font-size: 1em;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.adminDashboardPageContentFilterActionSingleButtonInput:hover{
+    background-color: $blue_dark;
+}
+
+// pagination starts
+.dashboardContentTablePagination {
+    width: $full-width;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .dashboardContentTablePaginationInner {
+    float: right;
+  }
+  .dashboardContentTablePaginationAction {
+    float: left;
+    margin-right: 15px;
+  }
+  .dashboardContentTablePaginationActionTxt:hover,
+  .active > .dashboardContentTablePaginationActionTxt {
+    background: $blue_darker;
+  }
+  .dashboardContentTablePaginationAction:last-child {
+    margin: 0px;
+  }
+  .dashboardContentTablePaginationActionTxt {
+    width: $full-width;
+    padding: 0px 30px;
+    height: 30px;
+    float: left;
+    font-family: font("SemiBold");
+    font-size: 0.85em;
+    text-align: center;
+    background: $blue_pagination;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $white;
+  }
+  .dashboardContentTablePaginationPages {
+    float: left;
+    margin: 0px 15px 0px 0px;
+  }
+  .dashboardContentTablePaginationPageSingle {
+    float: left;
+    padding: 0px 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $blue_pagination;
+    margin-right: 15px;
+  }
+  .dashboardContentTablePaginationPageSingle:last-child {
+    margin: 0px;
+  }
+  .dashboardContentTablePaginationPageSingle:hover {
+    background: $blue_pagination;
+    cursor: pointer;
+  }
+  
+  .dashboardContentTablePaginationPageSingle.active {
+    background: $blue_pagination;
+    cursor: pointer;
+  }
+  
+  .dashboardContentTablePaginationPageSingle:hover
+    .dashboardContentTablePaginationPageSingleTxt {
+    color: $white;
+  }
+  
+  .dashboardContentTablePaginationPageSingle.active
+    .dashboardContentTablePaginationPageSingleTxt {
+    color: $white;
+  }
+  
+  .dashboardContentTablePaginationPageSingleTxt {
+    width: $full-width;
+    float: left;
+    font-family: font("SemiBold");
+    font-size: 0.85em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue_pagination;
+  }
+  // pagination ends
+
+  .adminDashboardPageContentTableRowSingleIcon{
+    width: $full-width;
+    float: left;
+  }
+
+  .adminDashboardPageContentTableRowSingleIconInner{
+    float: left;
+    width: $full-width;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tableRowItemIco{
+    color: $blue-primary;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  .adminDashboardPageContentHeading{
+    width: $full-width;
+    float: left;
+  }
+
+  .adminDashboardPageContentHeadingTxt{
+    float: left;
+    font-family: font("Bold");
+    color: $text-dark;
+    font-size: 2em;
+  }
+
+  .adminDashboardPageContentMain{
+    width: $full-width;
+    float: left;
+    margin-top: 30px;
+  }
+
+  .adminDashboardPageContentStep{
+    width: $full-width;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  .adminDashboardPageContentStep:last-child{
+    margin-bottom: 0px;
+  }
+
+  .adminDashboardPageContentStepLable{
+    width: 25%;
+    float: left;
+  }
+
+  .adminDashboardPageContentStepLableTxt{
+    font-family: font("SemiBold");
+    color: $text-primary;
+    text-transform: capitalize;
+  }
+
+  .adminDashboardPageContentStepSeperator{
+    float: left;
+  }
+  .adminDashboardPageContentStepSeperatorTxt{
+    float: left;
+    color: $text-primary;
+  }
+
+  .adminDashboardPageContentStepDescription{
+    width: 74%;
+    float: left;
+  }
+  .adminDashboardPageContentStepDescriptionTxt{
+    width: $full-width;
+    float: left;
+    font-family: font("Regular");
+    color: $black;
+    text-transform: capitalize;
+  }
+
+  .adminDashboardPageContentStepAction{
+    width: $full-width;
+    float: left;
+    display: flex;
+    justify-content: right;
+  }
+
+  .pageRequestFoundSection{
+    width: $full-width;
+    margin-top: 50px;
+    float: left;
+  }
+
+  .pageRequestFoundSectionHeadings{
+    width: $full-width;
+    float: left;
+  }
+
+  .pageRequestFoundSectionHeadingLable{
+    width: $full-width;
+    float: left;
+  }
+
+  .pageRequestFoundSectionHeadingLableTxt{
+    float: left;
+    width: $full-width;
+    font-family: font("Bold");
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+
+  .pageRequestFoundSectionDescriptionLable{
+    width: $full-width;
+    float: left;
+    margin-top: 25px;
+  }
+
+  .pageRequestFoundSectionDescriptionLableTxt{
+    width: $full-width;
+    float: left;
+    margin-bottom: 15px;
+    color: $text_grey_dark;
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  .pageRequestFoundSectionDescriptionLableTxt:last-child{
+    margin: 0px;
+  }
+
+  .pageRequestFoundSectionDetails{
+    width: $full-width;
+    float: left;
+    padding: 30px 0px 0px 0px;
+    background: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+  }
+
+  .pageRequestFoundSectionDetailsHeading{
+    width: $full-width;
+    float: left;
+    padding: 0px 30px;
+  }
+
+  .pageRequestFoundSectionDetailsHeadingTxt{
+    width: $full-width;
+    float: left;
+    font-size: 1.2em;
+    font-family: font("Bold");
+    color: $text-primary;
+  }
+
+  .pageRequestFoundSectionDetailsContent{
+    width: $full-width;
+    float: left;
+    margin-top: 25px;
+    padding: 0px 30px 30px;
+  }
+
+  .pageRequestFoundSectionDetailsContentStep{
+    width: $full-width;
+    float: left;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+  }
+  .pageRequestFoundSectionDetailsContentStep:last-child{
+    margin: 0px;
+  }
+
+  .pageRequestFoundSectionDetailsContentStepLable{
+    width: 30%;
+    float: left;
+    
+    @include tab(){
+        width: auto;
+        padding-right: 10px;
+    }
+    @include mobile(){
+        width: 60%;
+        padding-right: 10px;
+    }
+  }
+  .pageRequestFoundSectionDetailsContentStepLableTxt{
+    float: left;
+    font-family: font("SemiBold");
+    font-size: 1em;
+    text-transform: capitalize;
+    color: $text-dark;
+  }
+  .pageRequestFoundSectionDetailsContentStepSeperator{
+    float: left;
+  }
+  .pageRequestFoundSectionDetailsContentStepSeperatorTxt{
+    float: left;
+    color: $text-dark;
+    
+    @include tab(){
+        margin-top: 1px;
+    }
+    @include mobile(){
+        margin-top: 1px;
+    }
+  }
+
+  .pageRequestFoundSectionDetailsContentStepField{
+    width: 69%;
+    float: left;
+    
+    @include tab(){
+        width: $full-width;
+        margin-top: 5px;
+    }
+    @include mobile(){
+        width: $full-width;
+        margin-top: 5px;
+    }
+  }
+  .pageRequestFoundSectionDetailsContentStepFieldTxt{
+    float: left;
+    font-family: font("Regular");
+    font-size: 1em;
+    text-transform: capitalize;
+    color: $text-dark;
+  }
+
+  .pageRequestFoundSectionDetailsContentStepFieldTxt.action{
+    float: left;
+    font-family: font("Bold");
+    font-size: 1em;
+    color: $blue_light;
+    text-transform: capitalize;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .pageRequestFoundSectionDetailsContentStepFieldTxt.action:hover{
+    color: $red_primary;
+  }
+
+  .pageRequestFoundSectionDetailsStatusAction{
+    width: $full-width;
+    float: left;
+    padding: 20px 30px;
+    background-color: $text_grey_light;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    @include tab(){
+        display: block;
+    }
+    @include mobile(){
+        display: block;
+    }
+  }
+
+.pageRequestFoundSectionDetailsStatus{
+   float: left;
+   display: flex;
+   gap: 30px;
+   flex-direction: row; 
+   align-items: center;
+    
+    @include tab(){
+        width: $full-width;
+    }
+    @include mobile(){
+        width: $full-width;
+    }
+}
+
+  .pageRequestFoundSectionDetailsStatusLable{
+    float: left;
+  }
+
+  .pageRequestFoundSectionDetailsStatusLableTxt{
+    float: left;
+    font-family: font("SemiBold");
+    font-size: 1em;
+    text-transform: capitalize;
+    color: $text-dark;
+  }
+
+  .pageRequestFoundSectionDetailsStatusSeperator{
+    float: left;
+  }
+  .pageRequestFoundSectionDetailsStatusSeperatorTxt{
+    float: left;
+    color: $text-dark;
+  }
+
+  .pageRequestFoundSectionDetailsStatusField{
+    float: left;
+  }
+  .pageRequestFoundSectionDetailsStatusFieldTxt{
+    float: left;
+    font-family: font("Regular");
+    font-size: 1em;
+    text-transform: capitalize;
+    color: $text-dark;
+  }
+
+  .pageRequestFoundSectionDetailsAction{
+    float: right;
+    
+    @include tab(){
+        width: $full-width;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    @include mobile(){
+        width: $full-width;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+  }
+
+  .pageRequestFoundSectionDetailsActionSingle{
+    padding: 10px 20px;
+    float: left;
+    background-color: $blue_light;
+    color: $white;
+    text-transform: uppercase;
+    font-family: font("Bold");
+    font-size: 0.9em;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .pageRequestFoundSectionDetailsActionSingle:last-child{
+    margin: 0px;
+  }
+  .pageRequestFoundSectionDetailsActionSingle:hover{
+      background-color: $blue_dark;
+  }
+  .pageRequestFoundSectionDetailsActionSingle:disabled{
+      opacity: 0.4;
+      cursor: no-drop;
+  }
+  .pageRequestFoundSectionDetailsActionSingle:disabled:hover{
+      background-color: $blue_light;
+  }
+
+  .alertPopUpRemarks{
+    width: $full-width;
+    padding: 30px;
+    float: left;
+  }
+
+  .alertPopUpRemarksHeading{
+    width: $full-width;
+    float: left;
+  }
+
+  .alertPopUpRemarksHeadingTxt{
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Mont Bold";
+    text-transform: capitalize;
+    color: $text_primary;
+    line-height: 1.5em;
+  }
+
+  .alertPopUpRemarksInput{
+    width: $full-width;
+    float: left;
+    margin-top: 25px;
+  }
+
+  .alertPopUpRemarksInputTxtarea{
+    width: $full-width;
+    float: left;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid $text_grey_light;
+    background-color: $white;
+    resize: none;
+    font-size: 0.9em;
+    font-family: font("Regular");
+    line-height: 1.4em;
+  }
+
+  .alertPopUpRemarksNote{
+    width: $full-width;
+    float: left;
+    margin-top: 15px;
+    padding: 0px 15%;
+    
+    @include tab(){
+        padding: 0px 10%;
+    }
+    @include mobile(){
+        padding: 0px 10px;
+    }
+  }
+
+  .alertPopUpRemarksNoteTxt{
+    float: left;
+    text-align: center;
+    color: $text_grey_dark;
+    font-size: 0.85em;
+    font-family: font("Regular");
+    line-height: 1.4em;
+  }
+
+  .alertPopUpRemarksActions{
+    width: $full-width;
+    float: left;
+    margin-top: 15px;
+  }
+
+  .alertPopUpChangePassword{
+    width: $full-width;
+    float: left;
+    position: relative;
+    padding-top: 60px;
+  }
+  .alertPopUpChangePasswordHeading{
+    width: $full-width;
+    float: left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+    @include flexCenter();
+    border-bottom: 2px solid $text_grey_light;
+  }
+  .alertPopUpChangePasswordHeadingTxt{
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Mont Bold";
+    text-transform: capitalize;
+    color: $text_primary;
+    line-height: 1.5em;
+  }
+
+  .alertPopUpChangePasswordContent{
+    width: $full-width;
+    padding: 30px 30px 0px;
+    max-height: 350px;
+    overflow-x: auto;
+    float: left;
+  }
+
+  .alertPopUpChangePasswordContentForm{
+    width: $full-width;
+    float: left;
+  }
+
+  .alertPopUpChangePasswordStep{
+    width: $full-width;
+    display: block;
+    margin-bottom: 30px;
+    float: left;
+  }
+  .alertPopUpChangePasswordStep:last-child{
+    margin: 0px;
+  }
+  .alertPopUpChangePasswordActions{
+    width: $full-width;
+    float: left;
+    padding: 20px 0px 30px;
+    background-color: $white;
+  }
+
+.alertPopUpActionSingle:disabled{
+    opacity: 0.4;
+    cursor: no-drop;
+}
+.alertPopUpActionSingle:disabled:hover{
+    background-color: $blue_light;
+}
+
+.tableDisabledButton {
+    float: left;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: font("SemiBold");
+    text-transform: capitalize;
+}
+.tableDisabledButton.primary {
+    background: $blue-primary;
+    color: $white;
+}
+.tableDisabledButton.success {
+    background: #278855;
+    color: $white;
+}
+.tableDisabledButton.danger {
+    background: #c84114;
+    color: $white;
+}
+
+.accessRestrictedPage{
+    width: $full-width;
+    height: 100vh;
+    float: left;
+    background-image: linear-gradient(180deg,rgba(68, 39, 165, .9),rgba(68, 39, 165, .9)),url('../../public/images/vidhansoudha-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accessRestrictedPageContent{
+    width: 300px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accessRestrictedPageContentLogo{
+    width: $full-width;
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: $white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.accessRestrictedPageContentLogoImage{
+    width: 100px;
+    float: left;
+}
+
+.accessRestrictedPageContentLogoImg{
+    width: $full-width;
+    float: left;
+}
+
+.accessRestrictedPageContentHeading{
+    width: $full-width;
+    float: left;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.accessRestrictedPageContentHeadingTxt{
+    float: left;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-family: font("Bold");
+    text-align: center;
+}
+
+.accessRestrictedPageContentDesc{
+    width: $full-width;
+    float: left;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.accessRestrictedPageContentDescTxt{
+    float: left;
+    color: #fff;
+    font-size: 1em;
+    text-transform: capitalize;
+    font-family: font("Regular");
+    text-align: center;
+    line-height: 1.5em;
+}

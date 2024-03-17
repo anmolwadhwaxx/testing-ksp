@@ -1,0 +1,37 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+};
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content
+    }
+};
+
+@mixin small {
+    @media (max-width: $small) {
+        @content
+    }
+};
+
+@mixin medium {
+    @media (max-width: $medium) {
+        @content
+    }
+};
+
+@mixin large {
+    @media (max-width: $large) {
+        @content
+    }
+};
